@@ -27,40 +27,47 @@ body {
 
     font-family: 'Montserrat', sans-serif;
     color: var(--text-color);
-
 }
 
 .container {
     max-width: 1920px;
     margin: auto;
+    position: relative;
 } 
 /* Global settings */
 
-/* Home page */
-.home nav {
+/* Navbar & Home page */
+/* header {
+    position: fixed;
+    width: 100%;
+    background-color: var(--text-wh-color);
+    z-index: 9999;
+} */
+
+.section nav {
     display: flex;
     justify-content: space-between;
     align-items: center; 
     padding: 30px 180px;
 }
 
-.home nav ul {
+.section nav ul {
     list-style-type: none;
     display: flex;
 }
 
-.home nav ul li {
+.section nav ul li {
     margin: 0 30px;
     font-size: 18px;
     font-weight: 500;
 }
 
-.home nav ul li > a {
+.section nav ul li > a {
    color: var(--text-color);
    text-decoration: none;
 }
 
-.home nav ul li > a::after {
+.section nav ul li > a::after {
     display: block;
     content: "";
     margin-top: 3px;
@@ -70,22 +77,22 @@ body {
     transition:  all .4s;
 }
 
-.home nav ul li:hover > a::after {
+.section nav ul li:hover > a::after {
     width: 100%;
 }
 
-.home nav .logo {
+.section nav .logo {
     font-size: 40px;
     font-weight: 600;
 }
 
-.home nav .logo span {
+.section nav .logo span {
     font-size: 70px;
     font-weight: 600;
     line-height: 0;
 }
 
-.home nav button {
+.section nav button {
     font-size: 18px;
     width: 130px;
     height: 50px;
@@ -95,38 +102,38 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-.home nav .hamburger {
+.section nav .hamburger {
     display: none;
 }
 
-.home nav .menu_icon {
+.section nav .menu_icon {
     display: none;
 }
 
-.home nav .close_icon {
+.section nav .close_icon {
     display: none;
 }
 
-.home main {
+.section main {
     padding: 100px 180px 0;
 }
 
-.home main .content-button {
+.section main .content-button {
     display: flex;
     margin-top: 50px;
 }
 
-.home main .content-button .video {
+.section main .content-button .video {
     display: flex;
     align-items: center;
 }
 
-.home main .text {
+.section main .text {
     font-size: 62px;
     max-width: 600px;
 }
 
-.home main .button-start {
+.section main .button-start {
     font-size: 18px;
     width: 160px;
     height: 50px;
@@ -138,117 +145,181 @@ body {
     margin-right: 50px;
 }
 
-.home main .content-button .video img {
+.section main .content-button .video img {
     margin-right: 20px;
 }
 
-.home main .content-button .video p {
+.section main .content-button .video p {
     font-size: 18px;
     font-weight: 500;
 }
 
-.home main .kayak {
+.section main .kayak {
     position: absolute;
     top: 110px;
-    right: calc(180px - 40px);
+    right: calc(380px - 40px);
 }
 
-.home main .kayak img {
+.section main .kayak img {
+    position: fixed;
     height: 800px;
     width: auto;
 }
 
-.home main .wave {
+.section main .wave {
     position: absolute;
     top: 160px;
     right: calc(180px * 2 + 40px);
 }
 
-.home main .start {
+.section main .start {
     position: absolute;
     top: 420px;
     right: calc(180px * 2.6);
 }
 
-.home main .content-info {
+.section main .content-info {
     margin: 130px 230px 70px 0;
     display: flex;
     justify-content: space-between;
     text-align: center;
 }
 
-.home main .content-info .info {
+.section main .content-info .info {
     margin: 20px;
 }
 
-.home main .content-info .info-title {
+.section main .content-info .info-title {
     font-size: 26px;
     font-weight: 500;
 }
 
-.home main .content-info .info-text {
+.section main .content-info .info-text {
     font-size: 18px;
     max-width: 330px;
     color: var(--subtext-color);
 }
-/* Home page */
+/* Navbar & Home page */
+
+/* Training page*/
+.section.training {
+    margin-top: 150px;
+    margin-bottom: 100px;
+}
+
+.section main .timer {
+    position: absolute;
+    top: calc(160px * 6);
+    right: calc(180px * 2 + 40px);
+}
+
+.section main .medals {
+    position: absolute;
+    top: calc(420px * 3);
+    right: calc(180px * 2.6);
+}
+
+.section.training main .content-info {
+    margin: 240px 230px 70px 0;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.section.training main .button-start {
+    margin-right: 0px;
+    margin-top: 50px;
+}
+/* Training page */
+
+/* Trip page */
+.section.trip {
+    margin-top: 150px;
+    margin-bottom: 100px;
+}
+
+.section main .camera {
+    position: absolute;
+    top: calc(160px * 11.5);
+    right: calc(180px * 2 + 40px);
+}
+
+.section main .heart {
+    position: absolute;
+    top: calc(435px * 5);
+    right: calc(180px * 2.6);
+}
+
+.section.trip main .content-info {
+    margin: 240px 230px 70px 0;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.section.trip main .button-start {
+    margin-right: 0px;
+    margin-top: 50px;
+}
+/* Trip page */
 
 /* Responsive */
 @media screen and (max-width: 1500px) {
 
 /* Home page */
-.home nav {
+.section nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 30px 100px;
 }
 
-.home nav ul li {
+.section nav ul li {
     margin: 0 20px;
     font-size: 16px;
     font-weight: 500;
 }
 
-.home nav .logo {
+.section nav .logo {
     font-size: 30px;
     font-weight: 600;
 }
 
-.home nav .logo span {
+.section nav .logo span {
     font-size: 70px;
     font-weight: 600;
     line-height: 0;
 }
 
-.home main {
+.section main {
     padding: 100px 100px 0;
 }
 
-.home main .text {
+.section main .text {
     font-size: 56px;
     max-width: 600px;
 }
 
-.home main .kayak {
+.section main .kayak {
     position: absolute;
     top: 110px;
-    right: calc((180px - 40px) - 80px);
+    right: calc((380px - 40px) - 80px);
 }
 
-.home main .kayak img {
+.section main .kayak img {
+    position: fixed;
     height: 800px;
     width: auto;
 }
 
-.home main .wave {
+.section main .wave {
     position: absolute;
     top: 160px;
     right: calc((180px * 2 + 40px) - 120px);
     transform: scale(90%);
 }
 
-.home main .start {
+.section main .start {
     position: absolute;
     top: 420px;
     right: calc((180px * 2.6) - 120px);
@@ -256,63 +327,150 @@ body {
 }
 /* Home page */
 
+/* Training page */
+.section.training {
+    margin-top: 150px;
+    margin-bottom: 150px;
+}
+
+.section main .timer {
+    position: absolute;
+    top: calc(160px * 6);
+    right: calc((180px * 2 + 40px) - 120px);
+    transform: scale(90%);
+}
+
+.section main .medals {
+    position: absolute;
+    top: calc(420px * 3);
+    right: calc((180px * 2.6) - 120px);
+    transform: scale(90%);
+}
+
+/* Trip page */
+.section.trip {
+    margin-top: 150px;
+    margin-bottom: 100px;
+}
+
+.section main .camera {
+    position: absolute;
+    top: calc(160px * 11.5);
+    right: calc((180px * 2 + 40px) - 120px);
+    transform: scale(90%);
+}
+
+.section main .heart {
+    position: absolute;
+    top: calc(435px * 5);
+    right: calc((180px * 2.6) - 120px);
+    transform: scale(90%);
+}
+
+.section.trip main .content-info {
+    margin: 240px 230px 70px 0;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.section.trip main .button-start {
+    margin-right: 0px;
+    margin-top: 50px;
+}
+
+.section.trip main .text {
+    font-size: 62px;
+    max-width: 500px;
+}
+/* Trip page */
 }
 
 @media screen and (max-width: 1024px) {
 
-/* Home page */
-.home nav {
+/* Navbar & Home page */
+.section nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 30px 50px;
 }
 
-.home main {
-    padding: 100px 50px 0;
+.section main {
+    padding: 50px 50px 0;
 }
 
-.home main .text {
+.section main .text {
     font-size: 56px;
     max-width: 600px;
 }
 
-.home main .kayak {
+.section main .kayak {
     position: absolute;
     top: 110px;
-    right: calc((180px - 40px) - 120px);
+    right: calc((380px - 40px) - 120px);
 }
 
-.home main .kayak img {
+.section main .kayak img {
+    position: fixed;
     height: 800px;
     width: auto;
 }
 
-.home main .wave {
+.section main .wave {
     position: absolute;
     top: 160px;
     right: calc((180px * 2 + 40px) - 200px);
     transform: scale(90%);
 }
 
-.home main .start {
+.section main .start {
     position: absolute;
     top: 420px;
     right: calc((180px * 2.6) - 200px);
     transform: scale(90%);
 }
-/* Home page */
+/* Navbar & Home page */
 
+/* Training page */
+.section main .timer {
+    position: absolute;
+    top: calc(160px * 6);
+    right: calc((180px * 2 + 40px) - 160px);
+    transform: scale(90%);
+}
+
+.section main .medals {
+    position: absolute;
+    top: calc(420px * 3);
+    right: calc((180px * 2.6) - 200px);
+    transform: scale(90%);
+}
+/* Training page */
+
+/* Trip page */
+.section main .camera {
+    right: calc((180px * 2 + 40px) - 160px);
+    transform: scale(90%);
+}
+
+.section main .heart {
+    right: calc((180px * 2.6) - 200px);
+    transform: scale(90%);
+}
+/* Trip page */
 }
 
 @media screen and (max-width: 950px) {
 
-/* Home page */
-.home nav .hamburger {
+/* Navbar & Home page */
+.section nav .hamburger {
     display: block;
 }
 
-.home nav.open {
+.section nav.open {
+    position: fixed;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -322,16 +480,16 @@ body {
     height: 100vh;
 }
 
-.home nav .logo {
+.section nav .logo {
     font-size: 40px;
     font-weight: 600;
 }
 
-.home nav .menu {
+.section nav .menu {
     display: none;
 }
 
-.home nav .menu.open {
+.section nav .menu.open {
     display: block;
     position: absolute;
     top: 50%;
@@ -340,92 +498,96 @@ body {
     z-index: 1;
 }
 
-.home nav .logo.open {
+.section nav .logo.open {
     color: var(--back-color);
 }
 
-.home nav .menu ul {
+.section nav .menu ul {
     display: block;
     justify-content: center;
     text-align: center;
 }
 
-.home nav .menu ul li {
+.section nav .menu ul li {
     font-size: 32px;
     margin: 60px 0;
     font-weight: 400;
 }
 
-.home nav .menu ul li > a {
+.section nav .menu ul li > a {
     color: var(--text-wh-color);
 }
 
-.home nav button {
+.section nav button {
     display: none;
 }
 
-.home nav .menu_icon {
+.section nav .menu_icon {
     display: block;
     line-height: 10px;
     cursor: pointer;
 }
 
-.home nav .menu_icon.close {
+.section nav .menu_icon.close {
     display: none;
 }
 
-.home nav .close_icon.open {
+.section nav .close_icon.open {
     display: block;
     cursor: pointer;
 }
 
-.home main {
+.section main {
     padding: 30px 20px 0;
 }
 
-.home main .text {
+.section main .text {
     font-size: 56px;
     max-width: 600px;
     text-align: center;
     margin: 0 auto;
 }
 
-.home main .kayak {
+.section main .kayak {
     position: absolute;
     top: 120px;
-    right: 300px;
+    right: 350px;
     transform: rotate(90deg);
 }
 
-.home main .kayak.hide {
+.section main .kayak img {
+    position: initial;
+}
+
+.section main .kayak.hide {
     display: none;
 }
 
-.home main .wave {
+.section main .wave {
     display: none;
 }
 
-.home main .start {
+.section main .start {
     display: none;
 }
 
-.home main .content-button {
+.section main .content-button {
     display: flex;
     justify-content: space-around;
     margin: 320px 50px 0;
 }
 
-.home main .content-button .video {
+.section main .content-button .video {
     display: flex;
     align-items: center;
 }
 
-.home main .text {
+.section main .text {
     font-size: 62px;
     max-width: 600px;
 }
 
-.home main .button-start {
+.section main .button-start {
     font-size: 18px;
     width: 160px;
     height: 50px;
@@ -437,49 +599,85 @@ body {
     margin-right: 50px;
 }
 
-.home main .content-button .video img {
+.section main .content-button .video img {
     margin-right: 20px;
 }
 
-.home main .content-button .video p {
+.section main .content-button .video p {
     font-size: 18px;
     font-weight: 500;
 }
 
-.home main .content-info {
+.section main .content-info {
     margin: 80px auto 0;
     display: flex;
     justify-content: space-between;
     text-align: center;
 }
 
-.home main .content-info .info {
+.section main .content-info .info {
     margin: 10px;
 }
 
-.home main .content-info .info-title {
+.section main .content-info .info-title {
     font-size: 26px;
     font-weight: 500;
 }
 
-.home main .content-info .info-text {
+.section main .content-info .info-text {
     font-size: 18px;
     max-width: 330px;
     color: var(--subtext-color);
 }
-/* Home page */
+/* Navbar & Home page */
 
+/* Training page */
+.section main .timer {
+    display: none;
 }
+
+.section main .medals {
+    display: none;
+}
+
+.section.training main .content-info {
+    margin: 200px auto 70px 0;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+/* Training page */
+
+/* Trip page */
+.section.trip main .text {
+    max-width: 600px;
+}
+
+.section main .camera {
+    display: none;
+}
+
+.section main .heart {
+    display: none;
+}
+
+.section.trip main .content-info {
+    margin: 200px auto 70px 0;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+}
+/* Trip page */
 
 @media screen and (max-width: 550px) {
 
-/* Home page */
-
-.home nav {
+/* Navbar & Home page */
+.section nav {
     padding: 10px 20px;
 }
 
-.home nav.open {
+.section nav.open {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -489,65 +687,65 @@ body {
     height: 100vh;
 }
 
-.home nav .logo {
+.section nav .logo {
     font-size: 30px;
     font-weight: 600;
 }
 
-.home nav .menu ul li {
+.section nav .menu ul li {
     font-size: 26px;
     margin: 50px 0;
     font-weight: 400;
 }
 
-.home nav .menu ul li > a {
+.section nav .menu ul li > a {
     color: var(--text-wh-color);
 }
 
-.home nav .menu_icon {
+.section nav .menu_icon {
     display: block;
     line-height: 0px;
     cursor: pointer;
 }
 
-.home nav .menu_icon img {
+.section nav .menu_icon img {
     width: 30px;
     height: auto;
 }
 
-.home nav .close_icon img {
+.section nav .close_icon img {
     width: 30px;
     height: auto;
 }
 
-.home nav .menu_icon.close {
+.section nav .menu_icon.close {
     display: none;
 }
 
-.home nav .close_icon.open {
+.section nav .close_icon.open {
     display: block;
     cursor: pointer;
 }
 
-.home main {
+.section main {
     padding: 50px 20px 0;
 }
 
-.home main .text {
+.section main .text {
     font-size: 36px;
     max-width: 500px;
     text-align: center;
     margin: 0 auto;
 }
 
-.home main .kayak {
+.section main .kayak {
     position: absolute;
     top: 0;
-    right: 300px;
+    right: 320px;
     transform: rotate(90deg);
 }
 
-.home main .content-button {
+.section main .content-button {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -555,7 +753,7 @@ body {
     margin: 380px 0 0;
 }
 
-.home main .button-start {
+.section main .button-start {
     font-size: 21px;
     width: 180px;
     height: 60px;
@@ -568,20 +766,20 @@ body {
     margin-bottom: 40px;
 }
 
-.home main .content-button .video {
+.section main .content-button .video {
     display: flex;
     align-items: center;
 }
 
-.home main .content-button .video img {
+.section main .content-button .video img {
     margin-right: 10px;
 }
 
-.home main .content-button .video p {
+.section main .content-button .video p {
     font-size: 21px;
 }
 
-.home main .content-info {
+.section main .content-info {
     margin: 100px 0;
     display: flex;
     flex-direction: column;
@@ -589,15 +787,43 @@ body {
     text-align: center;
 }
 
-.home main .content-info .info {
+.section main .content-info .info {
     margin: 20px;
 }
 
-.home main .content-info .info-text {
+.section main .content-info .info-text {
     margin: 0 auto;
 }
+/* Navbar & Home page */
 
-/* Home page */
+/* Training page */
+.section.training main .content-info {
+    margin-top: 100px;
+}
 
+.section.training main .content-info .info {
+    margin-bottom: 0;
+}
+
+.section.training main .button-start {
+    margin-top: 30px;
+    margin-bottom: 80px;
+}
+/* Training page */
+
+/* Trip page */
+.section.trip main .content-info {
+    margin-top: 100px;
+}
+
+.section.trip main .content-info .info {
+    margin-bottom: 0;
+}
+
+.section.trip main .button-start {
+    margin-top: 30px;
+    margin-bottom: 80px;
+}
+/* Trip page */
 }
 /* Responsive */
