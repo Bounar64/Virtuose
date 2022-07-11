@@ -1,3 +1,4 @@
+// Menu hamburger
 function toggleMenu() {
     const navbar = document.querySelector('.navbar');
     const hamburger = document.querySelector('.hamburger');
@@ -6,6 +7,7 @@ function toggleMenu() {
     const close_icon = document.querySelector('.close_icon');
     const menu = document.querySelector('.menu');
     const kayak = document.querySelector('.kayak');
+    const buttonRegister = document.querySelector('.button-register');
 
     hamburger.addEventListener('click', () => {
         navbar.classList.toggle('open');
@@ -14,6 +16,8 @@ function toggleMenu() {
         close_icon.classList.toggle('open');
         menu.classList.toggle('open');
         kayak.classList.toggle('hide');
+        buttonRegister.classList.toggle('open');
     })
 }
 toggleMenu();
+
