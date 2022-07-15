@@ -20,19 +20,19 @@
                 <div class="form login">
                     <span class="title">Login</span>
 
-                    <form action="#">
+                    <form action="#" id="login_form">
                         <div class="input-field">
-                            <input type="text" placeholder="Enter your username">
+                            <input type="text" placeholder="Enter your username" id="username_log">
                             <i class="bi bi-person"></i>
                         </div>
-                        <small>message d'erreur</small>
+                        <small></small>
         
                         <div class="input-field">
-                            <input type="password" class="password" placeholder="Enter your password">
+                            <input type="password" class="password" placeholder="Enter your password" id="password_log">
                             <i class="bi bi-lock icon"></i>
                             <i class="bi bi-eye-slash showHidePassword"></i>                       
                         </div>
-                        <small>message d'erreur</small>
+                        <small></small>
 
                         <div class="checkbox-text">
                             <div class="check-content">
@@ -44,7 +44,7 @@
                         </div>
 
                         <div class="input-field button">
-                            <input type="button" value="Login Now">
+                            <input type="submit" value="Login Now">
                         </div>
                     </form>
 
@@ -59,7 +59,7 @@
                 <div class="form signup">
                     <span class="title">Registration</span>
 
-                    <form action="#" id="form">
+                    <form action="#" id="register_form">
                         <div class="input-field">
                             <input type="text" placeholder="Enter your username" id="username">
                             <i class="bi bi-person"></i>
@@ -108,5 +108,6 @@
         </section>
 
 <script src="/src/js/form.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
 </body>
 </html>

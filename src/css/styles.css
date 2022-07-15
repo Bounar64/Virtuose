@@ -39,6 +39,19 @@ body.register {
     margin: auto;
     position: relative;
 } 
+
+body::-webkit-scrollbar {
+    width: 8px; /* width of the entire scrollbar */
+}
+  
+body::-webkit-scrollbar-track {
+    background: transparent; /* color of the tracking area */
+}
+  
+body::-webkit-scrollbar-thumb {
+    background-color: var(--back-color); /* color of the scroll thumb */
+    border-radius: 6px; /* roundness of the scroll thumb */
+}
 /* Global settings */
 
 /* Header */

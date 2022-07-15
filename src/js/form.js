@@ -33,14 +33,97 @@ login.addEventListener('click', () => {
     container.classList.remove('active');
 });
 
-const form = document.querySelector('#form');
+// Login form verification
+const loginForm = document.querySelector('#login_form');
+const usernameLog = document.querySelector('#username_log');
+const passwordLog = document.querySelector('#password_log');
+
+loginForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    loginFormVerify();
+
+    if(result.length === 2) {
+        alert("Login!");
+    };
+})
+
+function loginFormVerify() {
+    result = [];
+
+    // Input value
+    const usernameLogValue = usernameLog.value.trim();
+    const passwordLogValue = passwordLog.value.trim();
+
+     // Username check
+     if(usernameLogValue === '') {
+        let message = "Required field";
+        setErrorLog(usernameLog, message);
+    }else if(!usernameLogValue.match(/^[a-zA-Z]/)) {
+        let message = "";
+        setErrorLog(usernameLog, message);
+    }else {
+        let letterNum = usernameLogValue.length;
+        if(letterNum < 3) {
+            let message = "";
+            setErrorLog(usernameLog, message);
+        }else if(usernameLogValue != usernameTest) {
+            let message = "";
+            setErrorLog(usernameLog, message);
+        }else {
+            setSuccessLog(usernameLog);
+            result.push(1);
+        }
+    }
+
+    // Password check
+    if(passwordLogValue === '') {
+        let message = "Required field";
+        setErrorLog(passwordLog, message);
+    }else if(!passwordVerifyLength(passwordLogValue)) {
+        let message = "Wrong password"
+        setErrorLog(passwordLog, message)
+    }else if(passwordVerifyLength(passwordLogValue) && !passwordVerifyAll(passwordLogValue)) {
+        let message = "Wrong password"
+        setErrorLog(passwordLog, message)
+    }else if(usernameLogValue === usernameTest && passwordLogValue != passwordTest) {
+        let message = "Wrong password";
+        setErrorLog(usernameLog, message);
+    }else {
+        setSuccessLog(passwordLog);
+        result.push(1);
+    }
+}
+
+function setErrorLog(elem, message) {
+    const inputField = elem.parentElement;
+    const small = inputField.nextSibling.nextElementSibling; 
+
+    small.classList.add('error');
+    small.innerText = message;
+}
+
+function setSuccessLog(elem) {
+    const inputField = elem.parentElement;
+    const small = inputField.nextSibling.nextElementSibling;
+
+    small.classList.remove('error');
+    small.innerText = "";
+}
+
+
+// Test connection
+const usernameTest = "John";
+const passwordTest = "Password123@";
+
+// Register form verification
+const registerForm = document.querySelector('#register_form');
 const username = document.querySelector('#username');
 const email = document.querySelector('#email');
 const password = document.querySelector('#password');
 const comfirmPassword = document.querySelector('#comfirmPassword');
 const checkbox = document.getElementById('signCheck');
 
-form.addEventListener('submit', (e) => {
+registerForm.addEventListener('submit', (e) => {
     e.preventDefault();
     formVerify();
 

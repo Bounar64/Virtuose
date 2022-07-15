@@ -20,3 +20,5 @@ function toggleMenu() {
     })
 }
 toggleMenu();
+ 
+// Gsap animation 
