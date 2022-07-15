@@ -16,6 +16,7 @@
 
         <section class="section register">
             <div class="forms">
+                <!-- Login form -->
                 <div class="form login">
                     <span class="title">Login</span>
 
@@ -24,11 +25,14 @@
                             <input type="text" placeholder="Enter your username">
                             <i class="bi bi-person"></i>
                         </div>
+                        <small>message d'erreur</small>
+        
                         <div class="input-field">
                             <input type="password" class="password" placeholder="Enter your password">
                             <i class="bi bi-lock icon"></i>
                             <i class="bi bi-eye-slash showHidePassword"></i>                       
                         </div>
+                        <small>message d'erreur</small>
 
                         <div class="checkbox-text">
                             <div class="check-content">
@@ -55,43 +59,48 @@
                 <div class="form signup">
                     <span class="title">Registration</span>
 
-                    <form action="#">
+                    <form action="#" id="form">
                         <div class="input-field">
-                            <input type="text" placeholder="Enter your username">
+                            <input type="text" placeholder="Enter your username" id="username">
                             <i class="bi bi-person"></i>
                         </div>
-                        <div class="input-field">
-                            <input type="text" placeholder="Enter your email">
-                            <i class="bi bi-envelope"></i>
-                        </div>
-                        <div class="input-field">
-                            <input type="password" class="password" placeholder="Create a password">
-                            <i class="bi bi-lock icon"></i>
-                        </div>
+                        <small></small>
 
                         <div class="input-field">
-                            <input type="password" class="password" placeholder="Comfirm a password">
+                            <input type="text" placeholder="Enter your email" id="email">
+                            <i class="bi bi-envelope"></i>
+                        </div>
+                        <small></small>
+
+                        <div class="input-field">
+                            <input type="password" class="password" placeholder="Create a password" id="password">
+                            <i class="bi bi-lock icon"></i>
+                        </div>
+                        <small></small>
+
+                        <div class="input-field">
+                            <input type="password" class="password" placeholder="Comfirm a password" id="comfirmPassword">
                             <i class="bi bi-lock icon"></i>
                             <i class="bi bi-eye-slash showHidePassword"></i>                       
                         </div>
+                        <small></small>
 
-                        <div class="checkbox-text">
+                        <div class="checkbox-text signUp">
                             <div class="check-content">
                                 <input type="checkbox" class"text" id="signCheck">
-                                <label for="signCheck" class="text">Remenber me</label>
+                                <label for="signCheck" class="text">I have read and agree the <a href="#">Terms and Conditions</a> of this site</label>
                             </div>
-
-                            <a href="#" class="text">Forgot password?</a>
                         </div>
+                        <small></small>
 
                         <div class="input-field button">
-                            <input type="button" value="Login Now">
+                            <input type="submit" value="Register Now">
                         </div>
                     </form>
 
                     <div class="login-signup">
                         <span class="text">Not a member?
-                            <a href="#" class="text login-link">Signup now</a>
+                            <a href="#" class="text login-link">Login now</a>
                         </span>
                     </div>
                 </div>

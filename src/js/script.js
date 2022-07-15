@@ -20,4 +20,3 @@ function toggleMenu() {
     })
 }
 toggleMenu();
-

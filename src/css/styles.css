@@ -7,6 +7,8 @@
     --text-color: #363B53;
     --subtext-color: #8F9096;
     --text-wh-color: #F4F5FC;
+    --success-color:#00aa00;
+    --error-color:#e60000;
 }  
 
 * {
@@ -393,6 +395,7 @@ footer .copyright span.year {
     font-weight: 600;
     line-height: 0;
 }
+
 .container .forms {
     display: flex;
     align-items: center;
@@ -456,6 +459,7 @@ footer .copyright span.year {
     background-color: var(--back-color);
     border-radius: 15px;
 }
+
 .form .input-field {
     position: relative;
     height: 50px;
@@ -550,6 +554,33 @@ footer .copyright span.year {
     margin-top: 30px;
     text-align: center;
 }
+
+small {
+    position: absolute;
+    visibility: visible;
+}
+
+.input-field.success input {
+    border-bottom-color: var(--success-color);
+}
+
+.input-field.error input {
+    border-bottom-color: var(--error-color);
+}
+
+.input-field.success i {
+    color: var(--success-color);
+}
+
+.input-field.error i {
+    color: var(--error-color);
+}
+
+small.error {
+    visibility: visible;
+    color: var(--error-color);
+}
+
 /* Register page */
 
 /* Responsive */
