@@ -69,10 +69,6 @@ header {
     z-index: 999;
 }
 
-.section main #text-1 {
-    margin-top: 100px;
-}
-
 nav {
     display: flex;
     justify-content: space-between;
@@ -156,26 +152,30 @@ nav .close_icon {
 /* Header */
 
 /* Home page */
-.section main {
-    padding: 100px 180px 0;
+.section {
+    padding: 100px 180px;
 }
 
-.section main .content-button {
+.section #text-1 {
+    margin-top: 100px;
+}
+
+.section .content-button {
     display: flex;
     margin-top: 50px;
 }
 
-.section main .content-button .video {
+.section .content-button .video {
     display: flex;
     align-items: center;
 }
 
-.section main .text {
+.section .text {
     font-size: 62px;
     max-width: 600px;
 }
 
-.section main .button-start {
+.section .button-start {
     font-size: 18px;
     width: 160px;
     height: 50px;
@@ -185,58 +185,63 @@ nav .close_icon {
     color: var(--text-wh-color);
     font-family: 'Montserrat', sans-serif;
     margin-right: 50px;
+    cursor: pointer;
 }
 
-.section main .content-button .video img {
+.section .content-button .video  {
+    cursor: pointer;
+}
+
+.section .content-button .video img {
     margin-right: 20px;
 }
 
-.section main .content-button .video p {
+.section .content-button .video p {
     font-size: 18px;
     font-weight: 500;
 }
 
-.section main .kayak {
+.section .kayak {
     position: absolute;
     top: 110px;
     right: calc(380px - 40px);
 }
 
-.section main .kayak img {
+.section .kayak img {
     position: fixed;
     height: 800px;
     width: auto;
 }
 
-.section main .wave {
+.section .wave {
     position: absolute;
     top: 160px;
     right: calc(180px * 2 + 40px);
 }
 
-.section main .start {
+.section .start {
     position: absolute;
     top: 420px;
     right: calc(180px * 2.6);
 }
 
-.section main .content-info {
+.section .content-info {
     margin: 130px 230px 70px 0;
     display: flex;
     justify-content: space-between;
     text-align: center;
 }
 
-.section main .content-info .info {
+.section .content-info .info {
     margin: 20px;
 }
 
-.section main .content-info .info-title {
+.section .content-info .info-title {
     font-size: 26px;
     font-weight: 500;
 }
 
-.section main .content-info .info-text {
+.section .content-info .info-text {
     margin-top: 10px;
     font-size: 18px;
     max-width: 330px;
@@ -247,33 +252,29 @@ nav .close_icon {
 /* Training page */
 .section.training {
     position: relative;
+    padding-top: 200px;
 }
 
-.section.training {
-    margin-top: 150px;
-    margin-bottom: 100px;
-}
-
-.section main .timer {
+.section .timer {
     position: absolute;
-    top: 0;
+    top: 150px;
     right: calc(180px * 2 + 40px);
 }
 
-.section main .medals {
+.section .medals {
     position: absolute;
-    top: 300px;
+    top: 450px;
     right: calc(180px * 2.6);
 }
 
-.section.training main .content-info {
+.section.training .content-info {
     margin: 240px 230px 70px 0;
     display: flex;
     justify-content: space-between;
     text-align: center;
 }
 
-.section.training main .button-start {
+.section.training .button-start {
     margin-right: 0px;
     margin-top: 50px;
 }
@@ -282,33 +283,29 @@ nav .close_icon {
 /* Trip page */
 .section.trip {
     position: relative;
+    padding-top: 250px;
 }
 
-.section.trip {
-    margin-top: 170px;
-    margin-bottom: 100px;
-}
-
-.section main .camera {
+.section .camera {
     position: absolute;
-    top: -30px;
+    top: 150px;
     right: calc(180px * 2 + 40px);
 }
 
-.section main .heart {
+.section .heart {
     position: absolute;
-    top: 300px;
+    top: 450px;
     right: calc(180px * 2.6);
 }
 
-.section.trip main .content-info {
+.section.trip .content-info {
     margin: 240px 230px 70px 0;
     display: flex;
     justify-content: space-between;
     text-align: center;
 }
 
-.section.trip main .button-start {
+.section.trip .button-start {
     margin-right: 0px;
     margin-top: 50px;
 }
@@ -317,37 +314,33 @@ nav .close_icon {
 /* Location page */
 .section.location {
     position: relative;
+    padding-top: 250px;
 }
 
-.section.location main .text {
+.section.location .text {
     max-width: 750px;
 }
 
-.section.location {
-    margin-top: 150px;
-    margin-bottom: 100px;
-}
-
-.section main .safety {
+.section .safety {
     position: absolute;
-    top: 0;
+    top: 150px;
     right: calc(180px * 2 + 40px);
 }
 
-.section main .quality {
+.section .quality {
     position: absolute;
-    top: 280px;
+    top: 400px;
     right: calc(180px * 2.6);
 }
 
-.section.location main .content-info {
+.section.location .content-info {
     margin: 240px 230px 70px 0;
     display: flex;
     justify-content: space-between;
     text-align: center;
 }
 
-.section.location main .button-start {
+.section.location .button-start {
     margin-right: 0px;
     margin-top: 50px;
 }
@@ -366,6 +359,7 @@ footer {
 
 footer .footer-logo img {
     margin: 0 20px;
+    cursor: pointer;
 }
 
 footer .footer-service ul {
@@ -627,7 +621,7 @@ small.error {
         align-items: center;
         padding: 30px 100px;
     }
-
+    
     nav.scroll {
         display: flex;
         justify-content: space-between;
@@ -654,35 +648,35 @@ small.error {
     /* Header */
 
     /* Home page */
-    .section main {
+    .section {
         padding: 100px 100px 0;
     }
 
-    .section main .text {
+    .section .text {
         font-size: 56px;
         max-width: 600px;
     }
 
-    .section main .kayak {
+    .section .kayak {
         position: absolute;
         top: 110px;
         right: calc((380px - 40px) - 80px);
     }
 
-    .section main .kayak img {
+    .section .kayak img {
         position: fixed;
         height: 800px;
         width: auto;
     }
 
-    .section main .wave {
+    .section .wave {
         position: absolute;
         top: 160px;
         right: calc((180px * 2 + 40px) - 120px);
         transform: scale(90%);
     }
 
-    .section main .start {
+    .section .start {
         position: absolute;
         top: 420px;
         right: calc((180px * 2.6) - 120px);
@@ -693,19 +687,18 @@ small.error {
     /* Training page */
     .section.training {
         margin-top: 150px;
-        margin-bottom: 150px;
     }
 
-    .section main .timer {
+    .section .timer {
         position: absolute;
-        top: 0;
+        top: 150px;
         right: calc((180px * 2 + 40px) - 120px);
         transform: scale(90%);
     }
 
-    .section main .medals {
+    .section .medals {
         position: absolute;
-        top: 300;
+        top: 420px;
         right: calc((180px * 2.6) - 120px);
         transform: scale(90%);
     }
@@ -713,73 +706,73 @@ small.error {
     /* Trip page */
     .section.trip {
         margin-top: 150px;
-        margin-bottom: 100px;
+        padding-top: 200px;
     }
 
-    .section main .camera {
+    .section .camera {
         position: absolute;
-        top: 30px;
+        top: 150px;
         right: calc((180px * 2 + 40px) - 120px);
         transform: scale(90%);
     }
 
-    .section main .heart {
+    .section .heart {
         position: absolute;
-        top: 350px;
+        top: 450px;
         right: calc((180px * 2.6) - 120px);
         transform: scale(90%);
     }
 
-    .section.trip main .content-info {
+    .section.trip .content-info {
         margin: 240px 230px 70px 0;
         display: flex;
         justify-content: space-between;
         text-align: center;
     }
 
-    .section.trip main .button-start {
+    .section.trip .button-start {
         margin-right: 0px;
         margin-top: 50px;
     }
 
-    .section.trip main .text {
+    .section.trip .text {
         font-size: 62px;
         max-width: 500px;
     }
     /* Trip page */
 
     /* Location page */
-    .section.location main .text {
+    .section.location .text {
         max-width: 600px;
     }
-
     .section.location {
         margin-top: 150px;
-        margin-bottom: 100px;
+        padding-top: 200px;
+        padding-bottom: 100px;
     }
 
-    .section main .safety {
+    .section .safety {
         position: absolute;
-        top: 0;
+        top: 150px;
         right: calc((180px * 2 + 40px) - 120px);
         transform: scale(90%);
     }
 
-    .section main .quality {
+    .section .quality {
         position: absolute;
-        top: 300px;
+        top: 400px;
         right: calc((180px * 2.6) - 120px);
         transform: scale(90%);
     }
 
-    .section.location main .content-info {
+    .section.location .content-info {
         margin: 240px 230px 70px 0;
         display: flex;
         justify-content: space-between;
         text-align: center;
     }
 
-    .section.location main .button-start {
+    .section.location .button-start {
         margin-right: 0px;
         margin-top: 50px;
     }
@@ -796,6 +789,10 @@ small.error {
         padding: 30px 50px;
     }
 
+    .section #text-1 {
+        margin-top: 150px;
+    }
+    
     nav.scroll {
         display: flex;
         justify-content: space-between;
@@ -805,35 +802,35 @@ small.error {
     /* Header */
 
     /* Home page */
-    .section main {
+    .section {
         padding: 50px 50px 0;
     }
 
-    .section main .text {
+    .section .text {
         font-size: 56px;
         max-width: 600px;
     }
 
-    .section main .kayak {
+    .section .kayak {
         position: absolute;
         top: 110px;
         right: calc((380px - 40px) - 120px);
     }
 
-    .section main .kayak img {
+    .section .kayak img {
         position: fixed;
         height: 800px;
         width: auto;
     }
 
-    .section main .wave {
+    .section .wave {
         position: absolute;
         top: 160px;
         right: calc((180px * 2 + 40px) - 200px);
         transform: scale(90%);
     }
 
-    .section main .start {
+    .section .start {
         position: absolute;
         top: 420px;
         right: calc((180px * 2.6) - 200px);
@@ -842,14 +839,14 @@ small.error {
     /* Home page */
 
     /* Training page */
-    .section main .timer {
+    .section .timer {
         position: absolute;
-        top: 0;
+        top: 300;
         right: calc((180px * 2 + 40px) - 160px);
         transform: scale(90%);
     }
 
-    .section main .medals {
+    .section .medals {
         position: absolute;
         top: 300;
         right: calc((180px * 2.6) - 200px);
@@ -858,24 +855,24 @@ small.error {
     /* Training page */
 
     /* Trip page */
-    .section main .camera {
+    .section .camera {
         right: calc((180px * 2 + 40px) - 160px);
         transform: scale(90%);
     }
 
-    .section main .heart {
+    .section .heart {
         right: calc((180px * 2.6) - 200px);
         transform: scale(90%);
     }
     /* Trip page */
 
     /* Location page */
-    .section main .safety {
+    .section .safety {
         right: calc((180px * 2 + 40px) - 160px);
         transform: scale(90%);
     }
 
-    .section main .quality {
+    .section .quality {
         right: calc((180px * 2.6) - 200px);
         transform: scale(90%);
     }
@@ -887,6 +884,10 @@ small.error {
     /* Header */
     nav .hamburger {
         display: block;
+    }
+
+    .section #text-1 {
+        margin-top: 120px;
     }
 
     nav.open {
@@ -962,52 +963,52 @@ small.error {
     /* Header */
 
     /* Home page */
-    .section main {
+    .section {
         padding: 30px 20px 0;
     }
 
-    .section main .text {
+    .section .text {
         font-size: 3rem;
         max-width: 600px;
         text-align: center;
         margin: 0 auto;
     }
 
-    .section main .kayak {
+    .section .kayak {
         position: absolute;
         top: 60px;
         right: 350px;
         transform: rotate(90deg);
     }
 
-    .section main .kayak img {
+    .section .kayak img {
         position: initial;
     }
 
-    .section main .kayak.hide {
+    .section .kayak.hide {
         display: none;
     }
 
-    .section main .wave {
+    .section .wave {
         display: none;
     }
 
-    .section main .start {
+    .section .start {
         display: none;
     }
 
-    .section main .content-button {
+    .section .content-button {
         display: flex;
         justify-content: space-around;
         margin: 320px 50px 0;
     }
 
-    .section main .content-button .video {
+    .section .content-button .video {
         display: flex;
         align-items: center;
     }
 
-    .section main .button-start {
+    .section .button-start {
         font-size: 18px;
         width: 160px;
         height: 50px;
@@ -1019,32 +1020,32 @@ small.error {
         margin-right: 50px;
     }
 
-    .section main .content-button .video img {
+    .section .content-button .video img {
         margin-right: 20px;
     }
 
-    .section main .content-button .video p {
+    .section .content-button .video p {
         font-size: 18px;
         font-weight: 500;
     }
 
-    .section main .content-info {
+    .section .content-info {
         margin: 80px auto 0;
         display: flex;
         justify-content: space-between;
         text-align: center;
     }
 
-    .section main .content-info .info {
+    .section .content-info .info {
         margin: 10px;
     }
 
-    .section main .content-info .info-title {
+    .section .content-info .info-title {
         font-size: 26px;
         font-weight: 500;
     }
 
-    .section main .content-info .info-text {
+    .section .content-info .info-text {
         font-size: 18px;
         max-width: 330px;
         color: var(--subtext-color);
@@ -1052,15 +1053,15 @@ small.error {
     /* Home page */
 
     /* Training page */
-    .section main .timer {
+    .section .timer {
         display: none;
     }
 
-    .section main .medals {
+    .section .medals {
         display: none;
     }
 
-    .section.training main .content-info {
+    .section.training .content-info {
         margin: 200px auto 70px 0;
         display: flex;
         justify-content: space-between;
@@ -1069,20 +1070,20 @@ small.error {
     /* Training page */
 
     /* Trip page */
-    .section.trip main .text {
+    .section.trip .text {
         max-width: 600px;
         font-size: 3rem;
     }
 
-    .section main .camera {
+    .section .camera {
         display: none;
     }
 
-    .section main .heart {
+    .section .heart {
         display: none;
     }
 
-    .section.trip main .content-info {
+    .section.trip .content-info {
         margin: 200px auto 70px 0;
         display: flex;
         justify-content: space-between;
@@ -1091,15 +1092,15 @@ small.error {
     /* Trip page */
 
     /* Location page */
-    .section main .safety {
+    .section .safety {
         display: none;
     }
 
-    .section main .quality {
+    .section .quality {
         display: none;
     }
 
-    .section.location main .content-info {
+    .section.location .content-info {
         margin: 200px auto 70px 0;
         display: flex;
         justify-content: space-between;
@@ -1148,6 +1149,10 @@ small.error {
 
     nav.scroll {
         padding: 10px 20px;
+    }
+
+    .section #text-1 {
+        margin-top: 100px;
     }
 
     nav.open {
@@ -1214,19 +1219,19 @@ small.error {
     /* Header */
 
     /* Home page */
-    .section main {
+    .section {
         padding: 50px 20px 0;
         position: relative;
     }
 
-    .section main .kayak {
+    .section .kayak {
         position: absolute;
         top: 130px;
         right: 320px;
         transform: rotate(90deg);
     }
 
-    .section main .content-button {
+    .section .content-button {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -1234,7 +1239,7 @@ small.error {
         margin: 380px 0 0;
     }
 
-    .section main .button-start {
+    .section .button-start {
         font-size: 21px;
         width: 180px;
         height: 60px;
@@ -1247,20 +1252,20 @@ small.error {
         margin-bottom: 40px;
     }
 
-    .section main .content-button .video {
+    .section .content-button .video {
         display: flex;
         align-items: center;
     }
 
-    .section main .content-button .video img {
+    .section .content-button .video img {
         margin-right: 10px;
     }
 
-    .section main .content-button .video p {
+    .section .content-button .video p {
         font-size: 21px;
     }
 
-    .section main .content-info {
+    .section .content-info {
         margin: 100px 0;
         display: flex;
         flex-direction: column;
@@ -1268,55 +1273,68 @@ small.error {
         text-align: center;
     }
 
-    .section main .content-info .info {
+    .section .content-info .info {
         margin: 20px;
     }
 
-    .section main .content-info .info-text {
+    .section .content-info .info-text {
         margin: 0 auto;
     }
     /* Home page */
 
     /* Training page */
-    .section.training main .content-info {
+    .section.training {
+        padding-top: 100px;
+    }
+
+    .section.training .content-info {
         margin-top: 100px;
     }
 
-    .section.training main .content-info .info {
+    .section.training .content-info .info {
         margin-bottom: 0;
     }
 
-    .section.training main .button-start {
+    .section.training .button-start {
         margin-top: 30px;
         margin-bottom: 80px;
     }
     /* Training page */
 
     /* Trip page */
-    .section.trip main .content-info {
-        margin-top: 100px;
+    .section.trip {
+        padding-top: 100px;
     }
 
-    .section.trip main .content-info .info {
+    .section.trip .content-info {
+        margin-top: 100px;
+        
+    }
+
+    .section.trip .content-info .info {
         margin-bottom: 0;
     }
 
-    .section.trip main .button-start {
+    .section.trip .button-start {
         margin-top: 30px;
         margin-bottom: 80px;
     }
     /* Trip page */
 
     /* location page */
-    .section.location main .content-info {
+    .section.location {
+        padding-top: 100px;
+    }
+
+    .section.location .content-info {
         margin-top: 100px;
     }
 
-    .section.location main .content-info .info {
+    .section.location .content-info .info {
         margin-bottom: 0;
     }
 
-    .section.location main .button-start {
+    .section.location .button-start {
         margin-top: 30px;
         margin-bottom: 80px;
     }
@@ -1371,7 +1389,7 @@ small.error {
 }
 
 @media screen and (max-width: 375px) {
-    .section main .kayak {
+    .section .kayak {
         position: absolute;
         top: 200px;
         right: 320px;

@@ -18,11 +18,38 @@ function toggleMenu() {
         kayak.classList.toggle('hide');
         buttonRegister.classList.toggle('open');
     })
+
+    // Menu hamburger leave on click links
+    links = document.querySelectorAll('.link');
+
+    links.forEach((link) => {
+        link.addEventListener('click', () => {
+            navbar.classList.toggle('open');
+            logo.classList.toggle('open');
+            menu_icon.classList.toggle('close');
+            close_icon.classList.toggle('open');
+            menu.classList.toggle('open');
+            kayak.classList.toggle('hide');
+            buttonRegister.classList.toggle('open');
+        })
+    })
 }
 toggleMenu();
 
-// Gsap animation Desktop
-document.addEventListener('DOMContentLoaded', function() {
+
+// Navbar animation
+window.addEventListener('scroll', () => {
+    scrollY = window.pageYOffset;
+    
+    if(scrollY > 0) {
+        document.querySelector('nav').classList.add('scroll');
+    }else {
+        document.querySelector('nav').classList.remove('scroll');
+    }
+});  
+
+// Gsap animation Desktop >= 1920px
+document.addEventListener('DOMContentLoaded', function() {    
 
     let width = window.innerWidth;
 
@@ -90,16 +117,5 @@ document.addEventListener('DOMContentLoaded', function() {
             delay: .5,
             scrollTrigger: '#text-4'
         })
-
-        // Kayak animation
-        window.addEventListener('scroll', () => {
-            scrollY = window.pageYOffset;
-
-            if(scrollY > 0) {
-                document.querySelector('nav').classList.add('scroll');
-            }else {
-                document.querySelector('nav').classList.remove('scroll');
-            }
-        });
     }
 });
