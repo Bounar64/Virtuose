@@ -20,5 +20,86 @@ function toggleMenu() {
     })
 }
 toggleMenu();
- 
-// Gsap animation 
+
+// Gsap animation Desktop
+document.addEventListener('DOMContentLoaded', function() {
+
+    let width = window.innerWidth;
+
+    if(width >= 1920) {
+
+        // Text Animation 
+        gsap.from('header', {
+            y: -200,
+            duration: 1.5
+        })
+
+        gsap.from('#kayak', {
+            y: 1000,
+            duration: 1.5,
+            delay: .5
+        }) 
+
+        gsap.from('#text-1', {
+            x: -1200,
+            duration: 1.5,
+            delay: .5
+        })
+
+        gsap.from('.content-button', {
+            x: -1000,
+            duration: 1.5,
+            delay: .5
+        })
+
+        gsap.from('#content-info-1', {
+            y: 500,
+            duration: 2,
+            delay: .5
+        })
+
+        gsap.from('#icon_wave', {
+            opacity:  0,
+            duration: 2.5,
+            delay: 2
+        })
+
+        gsap.from('#icon_start', {
+            opacity:  0,
+            duration: 2.5,
+            delay: 2
+        })
+
+        gsap.from('#text-2', {
+            x: -1200,
+            duration: 1.5,
+            delay: .5,
+            scrollTrigger: '#text-2'
+        })
+
+        gsap.from('#text-3', {
+            x: -1200,
+            duration: 1.5,
+            delay: .5,
+            scrollTrigger: '#text-3'
+        })
+
+        gsap.from('#text-4', {
+            x: -1200,
+            duration: 1.5,
+            delay: .5,
+            scrollTrigger: '#text-4'
+        })
+
+        // Kayak animation
+        window.addEventListener('scroll', () => {
+            scrollY = window.pageYOffset;
+
+            if(scrollY > 0) {
+                document.querySelector('nav').classList.add('scroll');
+            }else {
+                document.querySelector('nav').classList.remove('scroll');
+            }
+        });
+    }
+});
