@@ -48,79 +48,74 @@ window.addEventListener('scroll', () => {
     }
 });  
 
-// Gsap animation Desktop >= 1920px
+// Gsap animation
 const Animation = () => {    
 
     // Little trick :)
     console.log('%cWelcome to %cVirtuose %c.', 'color: #F4F5FC; font-family: Montserrat; font-size: 20px', 'color: #E4FF3B; font-family: Montserrat; font-size: 36px;', 'color: #E4FF3B; font-family: Montserrat; font-size: 46px');
 
-    let width = window.innerWidth;
+    // Text Animation 
+    gsap.from('header', {
+        y: -200,
+        duration: 1.5
+    })
 
-    if(width >= 1920) {
+    gsap.from('#kayak', {
+        y: 1000,
+        duration: 1.5,
+        delay: .5
+    }) 
 
-        // Text Animation 
-        gsap.from('header', {
-            y: -200,
-            duration: 1.5
-        })
+    gsap.from('#text-1', {
+        x: -1200,
+        duration: 1.5,
+        delay: .5
+    })
 
-        gsap.from('#kayak', {
-            y: 1000,
-            duration: 1.5,
-            delay: .5
-        }) 
+    gsap.from('.content-button', {
+        x: -1000,
+        duration: 1.5,
+        delay: .5
+    })
 
-        gsap.from('#text-1', {
-            x: -1200,
-            duration: 1.5,
-            delay: .5
-        })
+    gsap.from('#content-info-1', {
+        y: 500,
+        duration: 2,
+        delay: .5
+    })
 
-        gsap.from('.content-button', {
-            x: -1000,
-            duration: 1.5,
-            delay: .5
-        })
+    gsap.from('#icon_wave', {
+        opacity:  0,
+        duration: 2.5,
+        delay: 2
+    })
 
-        gsap.from('#content-info-1', {
-            y: 500,
-            duration: 2,
-            delay: .5
-        })
+    gsap.from('#icon_start', {
+        opacity:  0,
+        duration: 2.5,
+        delay: 2
+    })
 
-        gsap.from('#icon_wave', {
-            opacity:  0,
-            duration: 2.5,
-            delay: 2
-        })
+    gsap.from('#text-2', {
+        x: -1200,
+        duration: 1.5,
+        delay: .5,
+        scrollTrigger: '#text-2'
+    })
 
-        gsap.from('#icon_start', {
-            opacity:  0,
-            duration: 2.5,
-            delay: 2
-        })
+    gsap.from('#text-3', {
+        x: -1200,
+        duration: 1.5,
+        delay: .5,
+        scrollTrigger: '#text-3'
+    })
 
-        gsap.from('#text-2', {
-            x: -1200,
-            duration: 1.5,
-            delay: .5,
-            scrollTrigger: '#text-2'
-        })
-
-        gsap.from('#text-3', {
-            x: -1200,
-            duration: 1.5,
-            delay: .5,
-            scrollTrigger: '#text-3'
-        })
-
-        gsap.from('#text-4', {
-            x: -1200,
-            duration: 1.5,
-            delay: .5,
-            scrollTrigger: '#text-4'
-        })
-    }
-};
+    gsap.from('#text-4', {
+        x: -1200,
+        duration: 1.5,
+        delay: .5,
+        scrollTrigger: '#text-4'
+    })
+}
 
 window.onload= Animation();
