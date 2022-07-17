@@ -49,7 +49,10 @@ window.addEventListener('scroll', () => {
 });  
 
 // Gsap animation Desktop >= 1920px
-document.addEventListener('DOMContentLoaded', function() {    
+const Animation = () => {    
+
+    // Little trick :)
+    console.log('%cWelcome to %cVirtuose %c.', 'color: #F4F5FC; font-family: Montserrat; font-size: 20px', 'color: #E4FF3B; font-family: Montserrat; font-size: 36px;', 'color: #E4FF3B; font-family: Montserrat; font-size: 46px');
 
     let width = window.innerWidth;
 
@@ -118,4 +121,6 @@ document.addEventListener('DOMContentLoaded', function() {
             scrollTrigger: '#text-4'
         })
     }
-});
+};
+
+window.onload= Animation();

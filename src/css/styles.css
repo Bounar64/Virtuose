@@ -396,6 +396,10 @@ footer .copyright span.year {
 /* footer */
 
 /* Registrer page */
+.section.register {
+    padding: 0;
+}
+
 .container.register {
     height: 100vh;
     display: flex;
@@ -609,6 +613,18 @@ small.error {
     color: var(--error-color);
 }
 
+.test-container {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 100%;
+    color: var(--text-wh-color);
+    z-index: 99;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 16px;
+}
 /* Register page */
 
 /* Responsive */
@@ -1137,6 +1153,19 @@ small.error {
         text-decoration: none;
         color: var(--text-color);
     }
+
+    .test-container {
+        position: absolute;
+        top: 20px;
+        left: 0;
+        width: 100%;
+        color: var(--text-color);
+        z-index: 99;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        font-size: 16px;
+    }
     /* Register page */
 }
 
@@ -1384,6 +1413,19 @@ small.error {
     .section.register {
         position: relative;
         max-width: 100%;
+    }
+
+    .test-container {
+        position: absolute;
+        top: 10px;
+        left: 0;
+        width: 100%;
+        color: var(--text-color);
+        z-index: 99;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        font-size: 16px;
     }
     /* Register page */
 }
