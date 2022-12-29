@@ -68,7 +68,7 @@ const Animation = () => {
 
     gsap.from('#text-1', {
         x: -1200,
-        duration: 1.5,
+        duration: 1.5, 
         delay: .5
     })
 
@@ -97,24 +97,33 @@ const Animation = () => {
     })
 
     gsap.from('#text-2', {
+        scrollTrigger: {
+            trigger: '#text-2',
+            start: '-500px 150px',
+        },
         x: -1200,
-        duration: 1.5,
-        delay: .5,
-        scrollTrigger: '#text-2'
+        duration: 1,
+        delay: 0.1
     })
 
     gsap.from('#text-3', {
+        scrollTrigger: {
+            trigger: '#text-3',
+            start: '-500px 150px',
+        },
         x: -1200,
-        duration: 1.5,
-        delay: .5,
-        scrollTrigger: '#text-3'
+        duration: 1,
+        delay: 0.1
     })
 
     gsap.from('#text-4', {
+        scrollTrigger: {
+            trigger: '#text-4',
+            start: '-500px 150px',
+        },
         x: -1200,
-        duration: 1.5,
-        delay: .5,
-        scrollTrigger: '#text-4'
+        duration: 1,
+        delay: 0.1
     })
 }
 
